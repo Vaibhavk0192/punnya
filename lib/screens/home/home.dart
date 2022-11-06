@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:delhihackathon/screens/home/MakeNGOProfile.dart';
 import 'package:flutter/material.dart';
@@ -152,7 +152,7 @@ class _HomeState extends State<Home> {
                         ),
                         Container(
                           margin: EdgeInsets.only(top: 2),
-                          height: MediaQuery.of(context).size.height / 6,
+                          height: MediaQuery.of(context).size.height / 5,
                           padding: EdgeInsets.all(6),
                           width: MediaQuery.of(context).size.width,
                           decoration: BoxDecoration(color: Color(0xFF83458A)),
@@ -175,7 +175,7 @@ class _HomeState extends State<Home> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
                                   crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: const [
+                                  children: [
                                     RowItem(
                                       imageSource:
                                           'assests/home_page/health-insurance (2).png',
@@ -198,7 +198,7 @@ class _HomeState extends State<Home> {
                                     ),
                                   ],
                                 ),
-                              )
+                              ),
                             ],
                           ),
                         ),
@@ -354,7 +354,7 @@ class OngoingCampaignItem extends StatelessWidget {
             child: Text(
               title,
               style: TextStyle(
-                fontSize: 15,
+                fontSize: 17,
                 fontWeight: FontWeight.w600,
                 color: Color(0xFF83458A),
               ),
