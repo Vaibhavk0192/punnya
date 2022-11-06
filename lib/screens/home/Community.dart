@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'components/community/community_post.dart';
+import 'community_post.dart';
 
 void main() {
   runApp(MyApp());
@@ -64,28 +64,28 @@ class _CommunityState extends State<Community> {
             CommunityPost(
               authorName: "chirayu",
               tags: ["shelter", "nature"],
-              imageSource: 'assets/images/community-images.png',
+              imageSource: 'assests/explore_page/community-images (1).png',
               likeCount: "2.2k",
               commentCount: "2.2k",
             ),
             CommunityPost(
               authorName: "vaibhav",
               tags: ["shelter", "nature"],
-              imageSource: 'assets/images/community-images.png',
+              imageSource: 'assests/explore_page/community-images (1).png',
               likeCount: "2.2k",
               commentCount: "2.2k",
             ),
             CommunityPost(
               authorName: "vaibhav",
               tags: ["shelter", "nature"],
-              imageSource: 'assets/images/community-images.png',
+              imageSource: 'assests/explore_page/community-images (1).png',
               likeCount: "2.2k",
               commentCount: "2.2k",
             ),
             CommunityPost(
               authorName: "vaibhav",
               tags: ["shelter", "nature"],
-              imageSource: 'assets/images/community-images.png',
+              imageSource: 'assests/explore_page/community-images (1).png',
               likeCount: "2.2k",
               commentCount: "2.2k",
             ),
