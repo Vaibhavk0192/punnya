@@ -300,7 +300,7 @@ class _HomeState extends State<Home> {
   }
 }
 
-class OngoingCampaignItem extends StatelessWidget {
+class OngoingCampaignItem extends StatefulWidget {
   const OngoingCampaignItem({
     Key? key,
     required this.imageSource,
@@ -311,57 +311,73 @@ class OngoingCampaignItem extends StatelessWidget {
   final String imageSource, title, info;
 
   @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(10)),
-        boxShadow: const [
-          BoxShadow(
-            color: Color(0xFF83458A),
-            offset: Offset(0, 1.5),
-            blurRadius: 2,
-            spreadRadius: 1,
-          ),
-          BoxShadow(
-            color: Colors.white,
-            offset: Offset(0, 0),
-            blurRadius: 0,
-            spreadRadius: 0,
-          )
-        ],
-      ),
-      margin: EdgeInsets.fromLTRB(10, 10, 5, 10),
-      width: MediaQuery.of(context).size.width / 2,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Image.asset(
-            imageSource,
-            fit: BoxFit.fitWidth,
-          ),
-          Padding(
-            padding: EdgeInsets.fromLTRB(5, 0, 5, 5),
-            child: Text(
-              title,
-              style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w600,
-                color: Color(0xFF83458A),
-              ),
-            ),
-          ),
+  State<OngoingCampaignItem> createState() => _OngoingCampaignItemState();
+}
 
-          Padding(
-            padding: const EdgeInsets.fromLTRB(5, 0, 5, 5),
-            child: Text(
-              info,
-              style: TextStyle(
-                color: Color(0xFFB97EC1),
+class _OngoingCampaignItemState extends State<OngoingCampaignItem> {
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+
+      onTap: ()
+        {
+          setState(() {
+
+          Navigator.pushNamed(context, '/ngopage');
+          });
+        },
+      child: Container(
+
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+          boxShadow: const [
+            BoxShadow(
+              color: Color(0xFF83458A),
+              offset: Offset(0, 1.5),
+              blurRadius: 2,
+              spreadRadius: 1,
+            ),
+            BoxShadow(
+              color: Colors.white,
+              offset: Offset(0, 0),
+              blurRadius: 0,
+              spreadRadius: 0,
+            )
+          ],
+        ),
+        margin: EdgeInsets.fromLTRB(10, 10, 5, 10),
+        width: MediaQuery.of(context).size.width / 2,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.asset(
+              widget.imageSource,
+              fit: BoxFit.fitWidth,
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(5, 0, 5, 5),
+              child: Text(
+                widget.title,
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                  color: Color(0xFF83458A),
+                ),
               ),
             ),
-          ),
-        ],
+
+            Padding(
+              padding: const EdgeInsets.fromLTRB(5, 0, 5, 5),
+              child: Text(
+                widget.info,
+                style: TextStyle(
+                  color: Color(0xFFB97EC1),
+                ),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
