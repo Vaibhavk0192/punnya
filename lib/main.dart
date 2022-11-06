@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:delhihackathon/screens/home/MakeNGOProfile.dart';
+import 'package:delhihackathon/screens/home/Specific_NGO_Details.dart';
 import 'package:delhihackathon/screens/wrapper.dart';
 import 'package:delhihackathon/services/auth.dart';
 import 'package:delhihackathon/models/user.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           routes: {
             '/ngoprofile': (context) => MakeNGOProfile(),
+            '/ngopage': (context) => Specific_Info(),
           },
           theme: ThemeData(
             textTheme: GoogleFonts.montserratTextTheme(),
