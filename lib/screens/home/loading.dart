@@ -25,11 +25,11 @@ class _LoadingState extends State<Loading> {
               width: 200,
               child: Stack(
                 children: [
-                  Image.asset('assets/images/logo.png'),
+                  Image.asset('assests/Profile_Page/logo.png'),
                   Positioned(
                     bottom: 20,
                     right: 20,
-                    child: Image.asset("assets/images/unnya.png"),
+                    child: Image.asset("assests/ProfileInfo/unnya.png"),
                   ),
                 ],
               ),

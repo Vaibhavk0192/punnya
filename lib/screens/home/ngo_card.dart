@@ -46,8 +46,8 @@ class _NgoCardState extends State<NgoCard> {
                           Expanded(
                             flex: 1,
                             child: CircleAvatar(
-                              backgroundImage: NetworkImage(
-                                  'https://upload.wikimedia.org/wikipedia/en/5/53/Chun-Li.png'),
+                              backgroundImage: AssetImage(
+                                  'assests/explore_page/WhatsApp Image 2022-11-06 at 11.39.09 AM.jpeg'),
                               radius: 35,
                             ),
                           ),
