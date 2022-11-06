@@ -343,23 +343,23 @@ class _MakeNGOProfileState extends State<MakeNGOProfile> {
                                       IconButton(
                                         onPressed: () {},
                                         icon: Image.asset(
-                                          "assets/MakeNGO/Facebook.png",
+                                          "assests/MakeNGO/Facebook.png",
                                         ),
                                       ),
                                       IconButton(
                                         onPressed: () {},
                                         icon: Image.asset(
-                                            "assets/MakeNGO/Twitter.png"),
+                                            "assests/MakeNGO/Twitter.png"),
                                       ),
                                       IconButton(
                                         onPressed: () {},
                                         icon: Image.asset(
-                                            "assets/MakeNGO/Linkedin.png"),
+                                            "assests/MakeNGO/Linkedin.png"),
                                       ),
                                       IconButton(
                                         onPressed: () {},
                                         icon: Image.asset(
-                                            "assets/MakeNGO/Instagram.png"),
+                                            "assests/MakeNGO/Instagram.png"),
                                       ),
                                     ],
                                   ),
