@@ -1,4 +1,5 @@
 import 'package:delhihackathon/models/user.dart';
+import 'package:delhihackathon/screens/home/loading.dart';
 import 'package:delhihackathon/services/auth.dart';
 import 'package:delhihackathon/services/database.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -410,7 +411,7 @@ class _ProfileState extends State<Profile> {
             );
           } else {
             print("no data");
-            return MakeProfile();
+            return Loading();
           }
         });
   }
