@@ -67,25 +67,21 @@ class _HomeState extends State<Home> {
             UserData userData = snapshot.requireData;
             String namee = userData.name.toString();
             return Scaffold(
-              backgroundColor:Color(0xFF83458A) ,
+              backgroundColor: Color(0xFF83458A),
               extendBody: true,
               body: SafeArea(
                 child: SingleChildScrollView(
-
                   child: Container(
-                     color: Colors.white,
-
-
+                    color: Colors.white,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
-                    padding: const EdgeInsets.fromLTRB(20, 20, 20, 15),
-                        color: Color(0xFF83458A),
-                      child:  Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-
+                          padding: const EdgeInsets.fromLTRB(20, 20, 20, 15),
+                          color: Color(0xFF83458A),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
                               Text(
                                 "Hi $namee !",
                                 style: TextStyle(
@@ -94,18 +90,19 @@ class _HomeState extends State<Home> {
                                   color: Color(0xFFF9DBEE),
                                 ),
                               ),
-
-                            Container(child: IconButton(
-                              icon:Icon(Icons.article_outlined),
-                              onPressed: ()
-                              {
-                                setState(() {
-                                  Navigator.pushNamed(context,'/ngoprofile');
-                                });
-                              },
-                                ),)
-                          ],
-                        ),
+                              Container(
+                                child: IconButton(
+                                  icon: Icon(Icons.article_outlined),
+                                  onPressed: () {
+                                    setState(() {
+                                      Navigator.pushNamed(
+                                          context, '/ngoprofile');
+                                    });
+                                  },
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                         Container(
                           padding: EdgeInsets.only(left: 20, bottom: 20),
@@ -115,7 +112,6 @@ class _HomeState extends State<Home> {
                           ),
                           child: Text(
                             'Well done is better than well said',
-
                             style: TextStyle(
                               color: Color(0xFFF9DBEE),
                             ),
@@ -165,37 +161,43 @@ class _HomeState extends State<Home> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Padding(
-                                padding: const EdgeInsets.fromLTRB(13, 0, 20,0),
+                                padding:
+                                    const EdgeInsets.fromLTRB(13, 0, 20, 0),
                                 child: Text(
                                   "Focus",
                                   style: TextStyle(
                                       fontSize: 20, color: Color(0xFFFFFAF8)),
                                 ),
                               ),
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: const [
-                                  RowItem(
-                                    imageSource:
-                                        'assests/home_page/health-insurance (2).png',
-                                    feildName: 'HealthCare',
-                                  ),
-                                  RowItem(
-                                    imageSource:
-                                        'assests/home_page/environmental.png',
-                                    feildName: 'Environmental',
-                                  ),
-                                  RowItem(
-                                    imageSource: 'assests/home_page/shelters.png',
-                                    feildName: 'Shelters',
-                                  ),
-                                  RowItem(
-                                    imageSource:
-                                        'assests/home_page/social-causes.png',
-                                    feildName: 'Social Causes',
-                                  ),
-                                ],
+                              SizedBox(
+                                width: MediaQuery.of(context).size.width,
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: const [
+                                    RowItem(
+                                      imageSource:
+                                          'assests/home_page/health-insurance (2).png',
+                                      feildName: 'HealthCare',
+                                    ),
+                                    RowItem(
+                                      imageSource:
+                                          'assests/home_page/environmental.png',
+                                      feildName: 'Environmental',
+                                    ),
+                                    RowItem(
+                                      imageSource:
+                                          'assests/home_page/shelters.png',
+                                      feildName: 'Shelters',
+                                    ),
+                                    RowItem(
+                                      imageSource:
+                                          'assests/home_page/social-causes.png',
+                                      feildName: 'Social Causes',
+                                    ),
+                                  ],
+                                ),
                               )
                             ],
                           ),
@@ -217,25 +219,29 @@ class _HomeState extends State<Home> {
                             scrollDirection: Axis.horizontal,
                             children: const [
                               OngoingCampaignItem(
-                                imageSource: 'assests/home_page/stock-image-1.png',
+                                imageSource:
+                                    'assests/home_page/stock-image-1.png',
                                 title: "Help Poor",
                                 info:
                                     "Make a donation to help the hungry get food.",
                               ),
                               OngoingCampaignItem(
-                                imageSource: 'assests/home_page/stock-image-1.png',
+                                imageSource:
+                                    'assests/home_page/stock-image-1.png',
                                 title: "Help Poor",
                                 info:
                                     "Make a donation to help the hungry get food.",
                               ),
                               OngoingCampaignItem(
-                                imageSource: 'assests/home_page/stock-image-1.png',
+                                imageSource:
+                                    'assests/home_page/stock-image-1.png',
                                 title: "Help Poor",
                                 info:
                                     "Make a donation to help the hungry get food.",
                               ),
                               OngoingCampaignItem(
-                                imageSource: 'assests/home_page/stock-image-1.png',
+                                imageSource:
+                                    'assests/home_page/stock-image-1.png',
                                 title: "Help Poor",
                                 info:
                                     "Make a donation to help the hungry get food.",
@@ -255,31 +261,34 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                         Container(
-
                           height: MediaQuery.of(context).size.height / 4.5,
                           child: ListView(
                             scrollDirection: Axis.horizontal,
                             children: const [
                               OngoingCampaignItem(
-                                imageSource: 'assests/home_page/stock-image-1.png',
+                                imageSource:
+                                    'assests/home_page/stock-image-1.png',
                                 title: "Help Poor",
                                 info:
                                     "Make a donation to help the hungry get food.",
                               ),
                               OngoingCampaignItem(
-                                imageSource: 'assests/home_page/stock-image-1.png',
+                                imageSource:
+                                    'assests/home_page/stock-image-1.png',
                                 title: "Help Poor",
                                 info:
                                     "Make a donation to help the hungry get food.",
                               ),
                               OngoingCampaignItem(
-                                imageSource: 'assests/home_page/stock-image-1.png',
+                                imageSource:
+                                    'assests/home_page/stock-image-1.png',
                                 title: "Help Poor",
                                 info:
                                     "Make a donation to help the hungry get food.",
                               ),
                               OngoingCampaignItem(
-                                imageSource: 'assests/home_page/stock-image-1.png',
+                                imageSource:
+                                    'assests/home_page/stock-image-1.png',
                                 title: "Help Poor",
                                 info:
                                     "Make a donation to help the hungry get food.",
@@ -351,7 +360,6 @@ class OngoingCampaignItem extends StatelessWidget {
               ),
             ),
           ),
-
           Padding(
             padding: const EdgeInsets.fromLTRB(5, 0, 5, 5),
             child: Text(
@@ -391,7 +399,7 @@ class RowItem extends StatelessWidget {
         child: Image.asset(imageSource),
       ),
       Padding(
-          padding: const EdgeInsets.fromLTRB(5, 10, 5, 0),
+        padding: const EdgeInsets.fromLTRB(5, 10, 5, 0),
         child: Text(
           feildName,
           style: TextStyle(
