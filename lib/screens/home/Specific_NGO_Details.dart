@@ -25,7 +25,7 @@ class _Specific_InfoState extends State<Specific_Info> {
                 child: InkWell(
                   onTap: () {},
                   child: Image(
-                    image: AssetImage('assets/Arrow1.png'),
+                    image: AssetImage('assests/Arrow1.png'),
                   ),
                 ),
               ),
@@ -44,7 +44,7 @@ class _Specific_InfoState extends State<Specific_Info> {
                   height: 20,
                   child: InkWell(
                     onTap: () {},
-                    child: Image.asset('assets/ProfileInfo/Share1.png'),
+                    child: Image.asset('assests/ProfileInfo/Share1.png'),
                   ),
                 ),
               )
@@ -59,7 +59,7 @@ class _Specific_InfoState extends State<Specific_Info> {
             alignment: AlignmentDirectional.topStart,
             children: [
               Image.asset(
-                "assets/ProfileInfo/NGO_Service.png",
+                "assests/ProfileInfo/NGO_Service.png",
               ),
               Align(
                 alignment: AlignmentDirectional.bottomCenter,
@@ -89,7 +89,7 @@ class _Specific_InfoState extends State<Specific_Info> {
                           Row(
                             children: [
                               Image.asset(
-                                "assets/Details_NGO/Placeholder1.png",
+                                "assests/Details_NGO/Placeholder1.png",
                                 scale: 20,
                               ),
                               SizedBox(
@@ -202,20 +202,20 @@ class _Specific_InfoState extends State<Specific_Info> {
                               IconButton(
                                 onPressed: () {},
                                 icon: Image.asset(
-                                  "assets/MakeNGO/Facebook.png",
+                                  "assests/MakeNGO/Facebook.png",
                                 ),
                               ),
                               IconButton(
                                 onPressed: () {},
-                                icon: Image.asset("assets/MakeNGO/Twitter.png"),
+                                icon: Image.asset("assests/MakeNGO/Twitter.png"),
                               ),
                               IconButton(
                                 onPressed: () {},
-                                icon: Image.asset("assets/MakeNGO/Linkedin.png"),
+                                icon: Image.asset("assests/MakeNGO/Linkedin.png"),
                               ),
                               IconButton(
                                 onPressed: () {},
-                                icon: Image.asset("assets/MakeNGO/Instagram.png"),
+                                icon: Image.asset("assests/MakeNGO/Instagram.png"),
                               ),
                             ],
                           ),
