@@ -53,7 +53,9 @@ class _ProfileState extends State<Profile> {
       }
     else
       {
-        return CircleAvatar( child:Image(
+        return CircleAvatar(
+          backgroundColor: Color(0xffB270A2),
+            child:Image(
           image: AssetImage(
               'assests/Profile_Page/man2.png'),
         )
