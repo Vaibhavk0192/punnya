@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:delhihackathon/screens/home/donation_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -218,7 +219,9 @@ class _Specific_InfoState extends State<Specific_Info> {
                           ),
                           Center(
                             child: InkWell(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>ReviewDonation()));
+                              },
                               child: Container(
                                 height: 45,
                                 width: 100,

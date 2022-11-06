@@ -11,22 +11,6 @@ import 'package:delhihackathon/screens/home/profile.dart';
 
 import '../../services/database.dart';
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(textTheme: GoogleFonts.montserratTextTheme()),
-      home: Home(),
-    );
-  }
-}
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -213,40 +197,48 @@ class _HomeState extends State<Home> {
                             ),
                           ),
                         ),
-                        Container(
-                          height: MediaQuery.of(context).size.height / 4.5,
-                          child: ListView(
-                            scrollDirection: Axis.horizontal,
-                            children: const [
-                              OngoingCampaignItem(
-                                imageSource:
-                                    'assests/home_page/stock-image-1.png',
-                                title: "Help Poor",
-                                info:
-                                    "Make a donation to help the hungry get food.",
-                              ),
-                              OngoingCampaignItem(
-                                imageSource:
-                                    'assests/home_page/stock-image-1.png',
-                                title: "Help Poor",
-                                info:
-                                    "Make a donation to help the hungry get food.",
-                              ),
-                              OngoingCampaignItem(
-                                imageSource:
-                                    'assests/home_page/stock-image-1.png',
-                                title: "Help Poor",
-                                info:
-                                    "Make a donation to help the hungry get food.",
-                              ),
-                              OngoingCampaignItem(
-                                imageSource:
-                                    'assests/home_page/stock-image-1.png',
-                                title: "Help Poor",
-                                info:
-                                    "Make a donation to help the hungry get food.",
-                              ),
-                            ],
+                  InkWell(
+                    onTap: ()
+                    {
+                      setState(() {
+                        Navigator.pushNamed(context, '/ngopage');
+                      });
+                    },
+                          child: Container(
+                            height: MediaQuery.of(context).size.height / 4.5,
+                            child: ListView(
+                              scrollDirection: Axis.horizontal,
+                              children: const [
+                                OngoingCampaignItem(
+                                  imageSource:
+                                      'assests/home_page/stock-image-1.png',
+                                  title: "Help Poor",
+                                  info:
+                                      "Make a donation to help the hungry get food.",
+                                ),
+                                OngoingCampaignItem(
+                                  imageSource:
+                                      'assests/home_page/stock-image-1.png',
+                                  title: "Help Poor",
+                                  info:
+                                      "Make a donation to help the hungry get food.",
+                                ),
+                                OngoingCampaignItem(
+                                  imageSource:
+                                      'assests/home_page/stock-image-1.png',
+                                  title: "Help Poor",
+                                  info:
+                                      "Make a donation to help the hungry get food.",
+                                ),
+                                OngoingCampaignItem(
+                                  imageSource:
+                                      'assests/home_page/stock-image-1.png',
+                                  title: "Help Poor",
+                                  info:
+                                      "Make a donation to help the hungry get food.",
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                         Container(
@@ -322,60 +314,60 @@ class OngoingCampaignItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(10)),
-        boxShadow: const [
-          BoxShadow(
-            color: Color(0xFF83458A),
-            offset: Offset(0, 1.5),
-            blurRadius: 2,
-            spreadRadius: 1,
-          ),
-          BoxShadow(
-            color: Colors.white,
-            offset: Offset(0, 0),
-            blurRadius: 0,
-            spreadRadius: 0,
-          )
-        ],
-      ),
-      margin: EdgeInsets.fromLTRB(10, 10, 5, 10),
-      width: MediaQuery.of(context).size.width / 2,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Image.asset(
-            imageSource,
-            fit: BoxFit.fitWidth,
-          ),
-          Padding(
-            padding: EdgeInsets.fromLTRB(5, 0, 5, 5),
-            child: Text(
-              title,
-              style: TextStyle(
-                fontSize: 17,
-                fontWeight: FontWeight.w600,
-                color: Color(0xFF83458A),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+          boxShadow: const [
+            BoxShadow(
+              color: Color(0xFF83458A),
+              offset: Offset(0, 1.5),
+              blurRadius: 2,
+              spreadRadius: 1,
+            ),
+            BoxShadow(
+              color: Colors.white,
+              offset: Offset(0, 0),
+              blurRadius: 0,
+              spreadRadius: 0,
+            )
+          ],
+        ),
+        margin: EdgeInsets.fromLTRB(10, 10, 5, 10),
+        width: MediaQuery.of(context).size.width / 2,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.asset(
+              imageSource,
+              fit: BoxFit.fitWidth,
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(5, 0, 5, 5),
+              child: Text(
+                title,
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w600,
+                  color: Color(0xFF83458A),
+                ),
               ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(5, 0, 5, 5),
-            child: Text(
-              info,
-              style: TextStyle(
-                color: Color(0xFFB97EC1),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(5, 0, 5, 5),
+              child: Text(
+                info,
+                style: TextStyle(
+                  color: Color(0xFFB97EC1),
+                ),
               ),
             ),
-          ),
-        ],
-      ),
-    );
+          ],
+        ),
+      );
   }
 }
 
-class RowItem extends StatelessWidget {
+class RowItem extends StatefulWidget {
   const RowItem({
     Key? key,
     required this.imageSource,
@@ -385,23 +377,36 @@ class RowItem extends StatelessWidget {
   final String imageSource, feildName;
 
   @override
+  State<RowItem> createState() => _RowItemState();
+}
+
+class _RowItemState extends State<RowItem> {
+  @override
   Widget build(BuildContext context) {
     return Column(mainAxisSize: MainAxisSize.min, children: [
-      Container(
-        width: MediaQuery.of(context).size.height / 12,
-        height: MediaQuery.of(context).size.height / 13,
-        decoration: BoxDecoration(
-          color: Color(0xFFB97EC1),
-          borderRadius: BorderRadius.all(
-            Radius.circular(10),
+      InkWell(
+        onTap: ()
+        {
+          setState(() {
+            Navigator.pushNamed(context, '/ngopage');
+          });
+        },
+        child: Container(
+          width: MediaQuery.of(context).size.height / 12,
+          height: MediaQuery.of(context).size.height / 13,
+          decoration: BoxDecoration(
+            color: Color(0xFFB97EC1),
+            borderRadius: BorderRadius.all(
+              Radius.circular(10),
+            ),
           ),
+          child: Image.asset(widget.imageSource),
         ),
-        child: Image.asset(imageSource),
       ),
       Padding(
         padding: const EdgeInsets.fromLTRB(5, 10, 5, 0),
         child: Text(
-          feildName,
+          widget.feildName,
           style: TextStyle(
             color: Color(0xFFFFFAF8),
             fontSize: 13,

@@ -30,17 +30,10 @@ class _BrewListState extends State<NgoList> {
 
 
     return ListView.builder(
-        itemCount: 1,
+        itemCount: ngos.length,
         itemBuilder:(context,index)
         {
-          return Column(
-            children: [
-          NgoCard(),
-          // NgoCard(),
-
-
-            ],
-          );
+          return NgoCard();
         }
     );
   }

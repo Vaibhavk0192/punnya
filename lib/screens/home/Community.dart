@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'bnb.dart';
 import 'community_post.dart';
 
 void main() {
@@ -43,9 +42,7 @@ class _CommunityState extends State<Community> {
       appBar: AppBar(
         centerTitle: true,
         leading: IconButton(
-          onPressed: () => setState(() {
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>Tabbar() ));
-          }),
+          onPressed: () => Navigator.of(context).pop(),
           icon: Icon(
             Icons.arrow_back_outlined,
             color: Colors.black,
