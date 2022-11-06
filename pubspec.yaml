@@ -76,6 +76,8 @@ flutter:
     - assests/login_page/
     - assests/explore_page/
     - assests/home_page/
+    - assests/MakeNGO/
+    - assests/ProfileInfo/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
