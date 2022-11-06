@@ -24,9 +24,6 @@ class _Specific_InfoState extends State<Specific_Info> {
                 height: 20,
                 child: InkWell(
                   onTap: () {},
-                  child: Image(
-                    image: AssetImage('assests/Arrow1.png'),
-                  ),
                 ),
               ),
               Center(
@@ -80,7 +77,7 @@ class _Specific_InfoState extends State<Specific_Info> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Name of NGO",
+                            "Rahi",
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 20,
@@ -89,7 +86,7 @@ class _Specific_InfoState extends State<Specific_Info> {
                           Row(
                             children: [
                               Image.asset(
-                                "assests/Details_NGO/Placeholder1.png",
+                                "assests/explore_page/Placeholder1.png",
                                 scale: 20,
                               ),
                               SizedBox(
